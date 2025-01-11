@@ -1,4 +1,4 @@
-from add import add_numbers, devide_numbers, multiply_numbers, subtract_numbers
+from add import add_numbers, devide_numbers, multiply_numbers, subtract_numbers,power_numbers
 # Test Functions
 def test_add_numbers():
     """
@@ -41,3 +41,11 @@ def test_subtract_numbers():
     assert subtract_numbers(-1, 1) == -2, "Should be -2"
     assert subtract_numbers(0, 0) == 0, "Should be 0"
     assert subtract_numbers(10, 20) == -10, "Should be -10"
+def test_power_numbers():
+    """
+    Test the power_numbers function with different inputs.
+    """
+    assert power_numbers(2, 3) == 8, "Should be 8"
+    assert power_numbers(2, 0) == 1, "Should be 1"
+    assert power_numbers(0, 3) == 0, "Should be 0"
+    assert power_numbers(10, 2) == 100, "Should be 100"

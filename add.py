@@ -23,3 +23,8 @@ def subtract_numbers(a, b):
     Subtract two numbers and returns the result.
     """
     return a - b
+def power_numbers(a, b):
+    """
+    Raise a to the power of b and returns the result.
+    """
+    return a ** b
