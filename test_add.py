@@ -1,4 +1,5 @@
-from add import add_numbers, devide_numbers, multiply_numbers, subtract_numbers,power_numbers
+from add import *
+
 # Test Functions
 def test_add_numbers():
     """
@@ -49,3 +50,52 @@ def test_power_numbers():
     assert power_numbers(2, 0) == 1, "Should be 1"
     assert power_numbers(0, 3) == 0, "Should be 0"
     assert power_numbers(10, 2) == 100, "Should be 100"
+def test_get_greeting():
+    """
+    Test the get_greeting function with different inputs.
+    """
+    assert get_greeting("Alice") == "Hello, Alice!", "Should be 'Hello, Alice!'"
+    assert get_greeting("Bob") == "Hello, Bob!", "Should be 'Hello, Bob!'"
+    assert get_greeting("Charlie") == "Hello, Charlie!", "Should be 'Hello, Charlie!'"
+    assert get_greeting("David") == "Hello, David!", "Should be 'Hello, David!'"
+def test_log_nums():
+    """ 
+    Test the log_nums function with different inputs.
+    """
+    assert log_nums(10, 100) == (2.302585092994046, 4.605170185988092), "Should be (2.302585092994046, 4.605170185988092)"
+    assert log_nums(1, 1) == (0.0, 0.0), "Should be (0.0, 0.0)"
+    assert log_nums(2, 2) == (0.6931471805599453, 0.6931471805599453), "Should be (0.6931471805599453, 0.6931471805599453)"
+    assert log_nums(10, 10) == (2.302585092994046, 2.302585092994046), "Should be (2.302585092994046, 2.302585092994046)"
+def test_sqrt_nums():
+    """ 
+    Test the sqrt_nums function with different inputs.
+    """
+    assert sqrt_nums(10, 100) == (3.1622776601683795, 10.0), "Should be (3.1622776601683795, 10.0)"
+    assert sqrt_nums(1, 1) == (1.0, 1.0), "Should be (1.0, 1.0)"
+    assert sqrt_nums(2, 2) == (1.4142135623730951, 1.4142135623730951), "Should be (1.4142135623730951, 1.4142135623730951)"
+    assert sqrt_nums(10, 10) == (3.1622776601683795, 3.1622776601683795), "Should be (3.1622776601683795, 3.1622776601683795)"
+def test_abs_nums():
+    """
+    Test the abs_nums function with different inputs.
+    """
+    assert abs_nums(-10, 100) == (10, 100), "Should be (10, 100)"
+    assert abs_nums(-1, 1) == (1, 1), "Should be (1, 1)"
+    assert abs_nums(2, -2) == (2, 2), "Should be (2, 2)"
+    assert abs_nums(-10, -10) == (10, 10), "Should be (10, 10)"
+def test_floor_nums():
+    """
+    Test the floor_nums function with different inputs.
+    """
+    assert floor_nums(10.5, 100.9) == (10, 100), "Should be (10, 100)"
+    assert floor_nums(1.1, 1.9) == (1, 1), "Should be (1, 1)"
+    assert floor_nums(2.9, 2.1) == (2, 2), "Should be (2, 2)"
+    assert floor_nums(10.1, 10.5) == (10, 10), "Should be (10, 10)"
+def test_ceil_nums():
+    """
+    Test the ceil_nums function with different inputs.
+    """
+    assert ceil_nums(10.5, 100.9) == (11, 101), "Should be (11, 101)"
+    assert ceil_nums(1.1, 1.9) == (2, 2), "Should be (2, 2)"
+    assert ceil_nums(2.9, 2.1) == (3, 3), "Should be (3, 3)"
+    assert ceil_nums(10.1, 10.5) == (11, 11), "Should be (11, 11)"
+
